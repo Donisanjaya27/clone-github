@@ -71,7 +71,7 @@ const VideoCard = ({
 				},
 				boxShadow: "none",
 				borderRadius: 2,
-				border: "1px solid gray",
+				
 			}}
 		>
 			<Grid container spacing={2}>
