@@ -22,6 +22,10 @@ const VideoDetail = () => {
 
   if (!videoDetail?.snippet) return <Loader />;
 
+   const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
 
   return (
@@ -36,7 +40,7 @@ const VideoDetail = () => {
               {title}
             </Typography>
             <Stack direction="row" justifyContent="space-between" sx={{ color: "#fff" }} py={1} px={2} >
-              <Link to={`/channel/${channelId}`}>
+              <Link to={`/channel/${channelId}`} onClick={scrollToTop}>
                 <Typography color="#fff" >
                   {channelTitle}
                   <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
