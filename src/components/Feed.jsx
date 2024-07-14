@@ -11,17 +11,23 @@ const Feed = () => {
   useEffect(() => {
     setVideos(null);
 
-    fetchFromAPI(`search?part=snippet&chart=${selectedCategory}`)
+    if(selectedCategory == "mostPopular"){
+
+    fetchFromAPI(`video?part=id%2Csnippet&chart=${selectedCategory}`)
       .then((data) => setVideos(data.items))
+    } else {
+         fetchFromAPI(`search?part=id%2Csnippet&chart=${selectedCategory}`)
+      .then((data) => setVideos(data.items))
+    }
     }, [selectedCategory]);
 
-  return (
+ return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box sx={{ height: { sx: "auto", md: "92vh" }, borderRight: "1px solid #3d3d3d", px: { sx: 0, md: 2 } }}>
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-         Santai dulu gak sih !
+          Copyright © 2022 JSM Media
         </Typography>
       </Box>
 
