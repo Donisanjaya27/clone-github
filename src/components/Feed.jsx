@@ -12,7 +12,7 @@ const Feed = () => {
     setVideos(null);
 
   
-         fetchFromAPI(`search?part=snippet&chart=${selectedCategory}`)
+         fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
   
     }, [selectedCategory]);
