@@ -5,13 +5,13 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar } from "./";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Trending");
+  const [selectedCategory, setSelectedCategory] = useState("mostPopular");
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
     setVideos(null);
 
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+    fetchFromAPI(`search?part=snippet&chart=${selectedCategory}`)
       .then((data) => setVideos(data.items))
     }, [selectedCategory]);
 
