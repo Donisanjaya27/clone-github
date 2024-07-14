@@ -5,7 +5,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar } from "./";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("#trending");
+  const [selectedCategory, setSelectedCategory] = useState("trending");
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
