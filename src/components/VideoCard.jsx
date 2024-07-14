@@ -6,13 +6,13 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from "../utils/constants";
 
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => (
-  <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none", borderRadius: '50px' }}>
+  <Card sx={{ width: { xs: '100%', sm: '358px', md: "320px", }, boxShadow: "none",   }}>
     <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY` }>
       <CardMedia image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} alt={snippet?.title} 
-        sx={{ width: { xs: '100%', sm: '358px'}, height: 180, borderTopLeftRadius: '50px', borderTopRightRadius: '50px' }} 
+        sx={{ width: { xs: '100%', sm: '358px'}, height: 180, borderRadius: '10px'  }} 
       />
     </Link>
-    <CardContent sx={{ backgroundColor: "#000", height: '106px', borderBottomLeftRadius: '50px', borderBottomRightRadius: '50px' }}>
+    <CardContent sx={{ backgroundColor: "#000", height: '106px',   }}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl } >
         <Typography color="#FFF">
           {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
