@@ -13,7 +13,7 @@ const Feed = () => {
 
     if(selectedCategory == "mostPopular"){
 
-    fetchFromAPI(`video?part=id%2Csnippet&chart=${selectedCategory}`)
+    fetchFromAPI(`videos?part=id%2Csnippet&chart=${selectedCategory}`)
       .then((data) => setVideos(data.items))
     } else {
          fetchFromAPI(`search?part=id%2Csnippet&chart=${selectedCategory}`)
