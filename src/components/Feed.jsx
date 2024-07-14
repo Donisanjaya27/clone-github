@@ -13,10 +13,10 @@ const Feed = () => {
 
     if(selectedCategory == "mostPopular"){
 
-    fetchFromAPI(`videos?part=id%2Csnippet&chart=${selectedCategory}`)
+    fetchFromAPI(`videos?part=snippet&chart=${selectedCategory}`)
       .then((data) => setVideos(data.items))
     } else {
-         fetchFromAPI(`search?part=id%2Csnippet&chart=${selectedCategory}`)
+         fetchFromAPI(`search?part=snippet&chart=${selectedCategory}`)
       .then((data) => setVideos(data.items))
     }
     }, [selectedCategory]);
