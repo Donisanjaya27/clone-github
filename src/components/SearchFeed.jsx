@@ -28,25 +28,36 @@ const SearchFeed = () => {
 
   return (
     <Box p={2} minHeight="95vh">
-      <Typography variant="h6" color="white" mb={3} ml={{ sm: "100px" }}>
+      <Typography   color="white" mb={3} ml={{ sm: "100px" }}>
         Hasil Pencarian untuk <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
       </Typography>
+    
       <Box display="flex">
-        <Box sx={{ mr: { sm: '100px' } }}/>
-        {<Videos videos={channel} />}
-      </Box>
-      <Box display="flex">
-        <Box sx={{ mr: { sm: '100px' } }}/>
+        <Box sx={{ mr: { sm: '100px' }, mb={3} }}/>
         {<Videos videos={videos} />}
       </Box>
+       <Typography variant="h6" color="white" mb={3} ml={{ sm: "100px" }}>
+        Search <span style={{ color: "#FC1503" }}>Views</span> videos
+      </Typography>
       <Box display="flex">
-        <Box sx={{ mr: { sm: '100px' } }}/>
+        <Box sx={{ mr: { sm: '100px' } mb={3} }}/>
         {<Videos videos={count} />}
       </Box>
+       <Typography variant="h6" color="white" mb={3} ml={{ sm: "100px" }}>
+       <span style={{ color: "#FC1503" }}>Search Date</span>
+      </Typography>
       <Box display="flex">
         <Box sx={{ mr: { sm: '100px' } }}/>
         {<Videos videos={date} />}
       </Box>
+ <Typography variant="h6" color="white" mb={3} ml={{ sm: "100px" }}>
+         <span style={{ color: "#FC1503" }}>Search Channel</span>  
+      </Typography>
+      <Box display="flex">
+        <Box sx={{ mr: { sm: '100px' }, mb={3} }}/>
+        {<Videos videos={channel} />}
+      </Box>
+      
     </Box>
   );
 };
