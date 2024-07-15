@@ -10,14 +10,14 @@ const SearchFeed = () => {
   const { searchTerm } = useParams();
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
+    fetchFromAPI(`search?part=snippet&q=${searchTerm}&order=rating`)
       .then((data) => setVideos(data.items))
   }, [searchTerm]);
 
   return (
     <Box p={2} minHeight="95vh">
       <Typography variant="h6"    color="white" mb={3} ml={{ sm: "100px"}}>
-        Search Results for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
+        Hasil Pencarian for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
       </Typography>
       <Box display="flex">
         <Box sx={{ mr: { sm: '100px' } }}/>
