@@ -33,7 +33,7 @@ const SearchFeed = () => {
       </Typography>
     
       <Box display="flex">
-        <Box sx={{ mr: { sm: '100px' }, mb={3} }}/>
+        <Box sx={{ mr: { sm: '100px' }  mb={3} }}/>
         {<Videos videos={videos} />}
       </Box>
        <Typography variant="h6" color="white" mb={3} ml={{ sm: "100px" }}>
@@ -54,7 +54,7 @@ const SearchFeed = () => {
          <span style={{ color: "#FC1503" }}>Search Channel</span>  
       </Typography>
       <Box display="flex">
-        <Box sx={{ mr: { sm: '100px' }, mb={3} }}/>
+        <Box sx={{ mr: { sm: '100px' }  mb={3} }}/>
         {<Videos videos={channel} />}
       </Box>
       
