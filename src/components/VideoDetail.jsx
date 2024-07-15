@@ -40,8 +40,8 @@ const VideoDetail = () => {
               {title}
             </Typography>
             <Stack direction="row" justifyContent="space-between" sx={{ color: "#fff" }} py={1} px={2} >
-              <Link to={`/channel/${channelId}`} onClick={scrollToTop}>
-                <Typography color="#fff" >
+              <Link to={`/channel/${channelId}`} onClick={scrollToTop}> 
+                <Typography color="#FC1503" >
                   {channelTitle}
                   <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
                 </Typography>
