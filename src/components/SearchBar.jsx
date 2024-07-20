@@ -11,7 +11,7 @@ const SearchBar = () => {
     e.preventDefault();
 
     if (searchTerm) {
-      navigate(`/search/${searchTerm}`);
+      navigate(`/youtube/v3/search/${searchTerm}`);
 
       setSearchTerm('');
     }
