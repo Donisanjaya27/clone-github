@@ -9,7 +9,6 @@ const options = {
    maxResults: 2500,
     key: 'AIzaSyBfr4i_TPRSadpPXYe4SHcW0Y5fUnyl7so',
     type: 'any',
-    part:'snippet'
   },
  
 };
