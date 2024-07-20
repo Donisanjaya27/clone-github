@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const BASE_URL = 'https://www.googleapis.com/youtube/v3/search;
+export const BASE_URL = 'https://www.googleapis.com/youtube/v3;
 //export const BASE_URL = 'https://youtube-v3-lite.p.rapidapi.com';
 
 const options = {
