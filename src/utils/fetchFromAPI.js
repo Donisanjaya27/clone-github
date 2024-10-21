@@ -4,7 +4,7 @@ import axios from 'axios';
 export const BASE_URL = 'https://youtube-v3-lite.p.rapidapi.com';
 const options = {
    params: {
-  maxResults: 2500, 
+  maxResults: 25, 
   },
   headers: {
     'X-RapidAPI-Key': 'bf4ad55bb9mshf2105f1de4360a1p1d8d2ejsn7a558d91acac',
